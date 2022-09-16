@@ -71,28 +71,28 @@ fun AboutTab(
                 text = pokemon.baseExperience.toString(),
                 color = Color.Black,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(vertical = 8.dp)
             )
             Text(
                 text = pokemon.height.toString(),
                 color = Color.Black,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(vertical = 8.dp)
             )
             Text(
                 text = pokemon.weight.toString(),
                 color = Color.Black,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(vertical = 8.dp)
             )
 
             Row() {
                 for (ability in pokemon.abilities)
                 Text(
-                    text = ability.ability.name,
+                    text = "${ability.ability.name} ",
                     color = Color.Black,
                     modifier = Modifier
-                        .padding(start = 8.dp, top = 8.dp, bottom = 8.dp, end = 2.dp)
+                        .padding(vertical = 8.dp)
                 )
             }
 

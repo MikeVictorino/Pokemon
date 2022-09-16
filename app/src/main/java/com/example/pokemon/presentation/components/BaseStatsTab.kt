@@ -12,12 +12,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.pokemon.domain.model.Pokemon
 
-@Preview
+
 @Composable
 fun BaseStatTab(
-    modifier: Modifier = Modifier
-    //needs a pokemon as parameter
+    modifier: Modifier = Modifier,
+    pokemon: Pokemon
 ) {
     Column(
         modifier = Modifier
@@ -37,7 +38,7 @@ fun BaseStatTab(
                     .weight(0.20F)
             )
             Text(
-                text = "45",
+                text = pokemon.stats[0].baseStat.toString(),
                 color = Color.Black,
                 modifier = Modifier
                     .padding(8.dp)
@@ -67,7 +68,7 @@ fun BaseStatTab(
                     .weight(0.20F)
             )
             Text(
-                text = "60",
+                text = pokemon.stats[1].baseStat.toString(),
                 color = Color.Black,
                 modifier = Modifier
                     .padding(8.dp)
@@ -97,7 +98,7 @@ fun BaseStatTab(
                     .weight(0.20F)
             )
             Text(
-                text = "00",
+                text = pokemon.stats[2].baseStat.toString(),
                 color = Color.Black,
                 modifier = Modifier
                     .padding(8.dp)
@@ -127,7 +128,7 @@ fun BaseStatTab(
                     .weight(0.20F)
             )
             Text(
-                text = "00",
+                text = pokemon.stats[3].baseStat.toString(),
                 color = Color.Black,
                 modifier = Modifier
                     .padding(8.dp)
@@ -157,7 +158,7 @@ fun BaseStatTab(
                     .weight(0.20F)
             )
             Text(
-                text = "00",
+                text = pokemon.stats[4].baseStat.toString(),
                 color = Color.Black,
                 modifier = Modifier
                     .padding(8.dp)

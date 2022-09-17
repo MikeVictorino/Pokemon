@@ -114,7 +114,7 @@ fun TabRowSheet(
                     BaseStatTab(pokemon = pokemon)
                 }
                 2 -> {
-                    MovesTab()
+                    MovesTab(pokemon = pokemon)
                 }
             }
         }

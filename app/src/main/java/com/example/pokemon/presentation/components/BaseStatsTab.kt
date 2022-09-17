@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -32,6 +33,7 @@ fun BaseStatTab(
             Text(
                 text = "HP",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
                     .padding(8.dp)
@@ -40,6 +42,7 @@ fun BaseStatTab(
             Text(
                 text = pokemon.stats[0].baseStat.toString(),
                 color = Color.Black,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(8.dp)
                     .weight(0.15F)
@@ -62,6 +65,7 @@ fun BaseStatTab(
             Text(
                 text = "Attack",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
                     .padding(8.dp)
@@ -70,6 +74,7 @@ fun BaseStatTab(
             Text(
                 text = pokemon.stats[1].baseStat.toString(),
                 color = Color.Black,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(8.dp)
                     .weight(0.15F)
@@ -92,6 +97,7 @@ fun BaseStatTab(
             Text(
                 text = "Sp. Atk",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
                     .padding(8.dp)
@@ -100,6 +106,7 @@ fun BaseStatTab(
             Text(
                 text = pokemon.stats[2].baseStat.toString(),
                 color = Color.Black,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(8.dp)
                     .weight(0.15F)
@@ -122,6 +129,7 @@ fun BaseStatTab(
             Text(
                 text = "Sp. Def",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
                     .padding(8.dp)
@@ -130,6 +138,7 @@ fun BaseStatTab(
             Text(
                 text = pokemon.stats[3].baseStat.toString(),
                 color = Color.Black,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(8.dp)
                     .weight(0.15F)
@@ -152,6 +161,7 @@ fun BaseStatTab(
             Text(
                 text = "Speed",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
                     .padding(8.dp)
@@ -160,6 +170,7 @@ fun BaseStatTab(
             Text(
                 text = pokemon.stats[4].baseStat.toString(),
                 color = Color.Black,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(8.dp)
                     .weight(0.15F)

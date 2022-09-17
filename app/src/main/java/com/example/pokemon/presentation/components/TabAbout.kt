@@ -7,6 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.capitalize
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -31,33 +32,37 @@ fun AboutTab(
             Text(
                 text = "Base Exp",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(vertical = 8.dp)
 
             )
             Text(
                 text = "Height",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(vertical = 8.dp)
 
             )
             Text(
                 text = "Weight",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(vertical = 8.dp)
 
             )
             Text(
                 text = "Abilities",
                 color = Color.LightGray,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Start,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(vertical = 8.dp)
 
             )
 
@@ -70,18 +75,21 @@ fun AboutTab(
             Text(
                 text = pokemon.baseExperience.toString(),
                 color = Color.Black,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(vertical = 8.dp)
             )
             Text(
                 text = pokemon.height.toString(),
                 color = Color.Black,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(vertical = 8.dp)
             )
             Text(
                 text = pokemon.weight.toString(),
                 color = Color.Black,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .padding(vertical = 8.dp)
             )
@@ -89,17 +97,15 @@ fun AboutTab(
             Row() {
                 for (ability in pokemon.abilities)
                 Text(
-                    text = "${ability.ability.name} ",
+                    text = ability.ability.name,
                     color = Color.Black,
+                    fontWeight = FontWeight.Bold,
                     modifier = Modifier
                         .padding(vertical = 8.dp)
                 )
             }
-
-
         }
     }
-
 }
 
 @Composable

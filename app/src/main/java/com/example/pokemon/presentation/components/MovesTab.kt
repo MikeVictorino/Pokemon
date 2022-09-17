@@ -1,8 +1,9 @@
 package com.example.pokemon.presentation.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -10,25 +11,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.pokemon.domain.model.LevelLearnedAt
+import com.example.pokemon.domain.model.Move
+import com.example.pokemon.domain.model.Pokemon
 
 
 @Composable
 fun MovesTab(
-    
+   pokemon: Pokemon
 ) {
 LazyColumn(){
-    items(10) {
-        MoveInfo()
+    items(pokemon.moves) { moves ->
+        MoveInfo(moves)
     }
 }
 
     
 }
 
-@Preview
 @Composable
 fun MoveInfo(
-    
+    move: Move,
 ) {
     Column(
         modifier = Modifier
@@ -40,7 +43,7 @@ fun MoveInfo(
                 .fillMaxWidth()
         ) {
             Text(
-                text = "Text Place holder",
+                text = move.move.name,
                 color = Color.Black,
                 modifier = Modifier
                     .padding(8.dp)

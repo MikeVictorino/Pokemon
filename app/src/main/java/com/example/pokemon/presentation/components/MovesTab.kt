@@ -9,6 +9,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.capitalize
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.pokemon.domain.model.LevelLearnedAt
@@ -43,7 +46,8 @@ fun MoveInfo(
                 .fillMaxWidth()
         ) {
             Text(
-                text = move.move.name,
+                text = move.move.name.capitalize(Locale.current),
+                fontWeight = FontWeight.SemiBold,
                 color = Color.Black,
                 modifier = Modifier
                     .padding(8.dp)

@@ -74,6 +74,12 @@ fun PokemonInfo(
                 Text(text = "Bottom sheet fraction: ${sheetState.progress.fraction}")
             }
         }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+        ) {
+
+        }
     }
 
 }

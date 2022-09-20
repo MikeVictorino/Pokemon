@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.capitalize
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -97,7 +98,7 @@ fun AboutTab(
             Row() {
                 for (ability in pokemon.abilities)
                 Text(
-                    text = ability.ability.name,
+                    text = "${ability.ability.name.capitalize(Locale.current)}. ",
                     color = Color.Black,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
